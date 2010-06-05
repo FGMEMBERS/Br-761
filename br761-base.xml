@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+ 
+    <author>BARANGER Emmanuel (3D)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+   
+    <fuel-fraction>0.8</fuel-fraction>
+  
+    <startup>
+      <splash-texture>Aircraft/Br-761/br761-splash.png</splash-texture>
+    </startup>
+
+    <model>
+      <path>Aircraft/Br-761/Models/br761.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <sound>
+      <path>Aircraft/Br-761/Sounds/br761-sound.xml</path>
+    </sound>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+      </generic>
+    </multiplay>
+
+    <flaps>
+      <setting> 0.00 </setting>
+      <setting> 0.25 </setting>
+      <setting> 0.50 </setting>
+      <setting> 0.75 </setting>
+      <setting> 1.00 </setting>
+    </flaps>
+
+    <help>
+      <title>Breguet Br 761</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close bay</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/br761-menu.xml"/>
+
+  </sim>
+
+  <input>
+    <keyboard include="Nasal/br761-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <br761>
+      <file>Aircraft/Br-761/Nasal/liveries.nas</file>
+      <file>Aircraft/Br-761/Nasal/light.nas</file>
+    </br761>
+    <doors>
+      <file>Aircraft/Br-761/Nasal/doors.nas</file>
+    </doors>
+  </nasal>
+
+</PropertyList>
+

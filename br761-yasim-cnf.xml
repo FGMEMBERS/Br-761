@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+Breguet Br 761 "Deux Ponts"
+May 2007 BARANGER Emmanuel
+************************************************************************
+-->
+
+<PropertyList include="br761-base.xml">
+
+  <sim>
+
+    <description>Breguet Br 761 "Deux Ponts" (YASim)</description>
+    <flight-model>yasim</flight-model>
+    <aero>br761-yasim</aero>
+
+  </sim>
+    
+</PropertyList>

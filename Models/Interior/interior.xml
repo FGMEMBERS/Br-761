@@ -32,18 +32,18 @@
     <object-name>intvitres</object-name>
   </animation>
 
-  <!-- Tableau de bord
+  <!-- Tableau de bord -->
   <model>
-    <path>Aircraft/737-100/Models/Interior/Panel/panel.xml</path>
+    <path>Aircraft/Br-761/Models/Interior/Panel/panel.xml</path>
     <offsets>
-      <x-m> -12.346 </x-m>
+      <x-m> -13.538 </x-m>
       <y-m>   0.000 </y-m>
-      <z-m>  -2.269 </z-m>
+      <z-m>  -0.699 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
-  </model> -->
+  </model>
 
   <!-- Pilote -->
   <model>

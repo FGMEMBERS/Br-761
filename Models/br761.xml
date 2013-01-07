@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -7,9 +7,23 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Br-761/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -39,25 +53,16 @@
     <object-name>derive</object-name>
     <object-name>directionG</object-name>
     <object-name>directionD</object-name>
-    <object-name>trainAH</object-name>
-    <object-name>trainAB</object-name>
-    <object-name>roueA</object-name>
     <object-name>porteAG1</object-name>
     <object-name>porteAG2</object-name>
     <object-name>porteAD1</object-name>
     <object-name>porteAD2</object-name>
-    <object-name>trainGH</object-name>
-    <object-name>trainGB</object-name>
-    <object-name>roueG</object-name>
     <object-name>porteGG1</object-name>
     <object-name>porteGG2</object-name>
     <object-name>porteGG3</object-name>
     <object-name>porteGD1</object-name>
     <object-name>porteGD2</object-name>
     <object-name>porteGD3</object-name>
-    <object-name>trainDH</object-name>
-    <object-name>trainDB</object-name>
-    <object-name>roueD</object-name>
     <object-name>porteDG1</object-name>
     <object-name>porteDG2</object-name>
     <object-name>porteDG3</object-name>
@@ -72,10 +77,6 @@
     <object-name>bolGI</object-name>
     <object-name>bolDE</object-name>
     <object-name>bolDI</object-name>
-    <object-name>heliceGE</object-name>
-    <object-name>heliceGI</object-name>
-    <object-name>heliceDE</object-name>
-    <object-name>heliceDI</object-name>
     <object-name>baieGA</object-name>
     <object-name>baieGB</object-name>
     <object-name>baieDA</object-name>
@@ -83,6 +84,20 @@
     <object-name>air</object-name>
     <object-name>antennes</object-name>
 
+    <object-name>heliceGE</object-name>
+    <object-name>heliceGI</object-name>
+    <object-name>heliceDE</object-name>
+    <object-name>heliceDI</object-name>
+    <object-name>trainAH</object-name>
+    <object-name>trainAB</object-name>
+    <object-name>roueA</object-name>
+    <object-name>trainGH</object-name>
+    <object-name>trainGB</object-name>
+    <object-name>roueG</object-name>
+    <object-name>trainDH</object-name>
+    <object-name>trainDB</object-name>
+    <object-name>roueD</object-name>
+    
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
     <object-name>cables</object-name>
@@ -111,25 +126,16 @@
     <object-name>derive</object-name>
     <object-name>directionG</object-name>
     <object-name>directionD</object-name>
-    <object-name>trainAH</object-name>
-    <object-name>trainAB</object-name>
-    <object-name>roueA</object-name>
     <object-name>porteAG1</object-name>
     <object-name>porteAG2</object-name>
     <object-name>porteAD1</object-name>
     <object-name>porteAD2</object-name>
-    <object-name>trainGH</object-name>
-    <object-name>trainGB</object-name>
-    <object-name>roueG</object-name>
     <object-name>porteGG1</object-name>
     <object-name>porteGG2</object-name>
     <object-name>porteGG3</object-name>
     <object-name>porteGD1</object-name>
     <object-name>porteGD2</object-name>
     <object-name>porteGD3</object-name>
-    <object-name>trainDH</object-name>
-    <object-name>trainDB</object-name>
-    <object-name>roueD</object-name>
     <object-name>porteDG1</object-name>
     <object-name>porteDG2</object-name>
     <object-name>porteDG3</object-name>
@@ -144,10 +150,6 @@
     <object-name>bolGI</object-name>
     <object-name>bolDE</object-name>
     <object-name>bolDI</object-name>
-    <object-name>heliceGE</object-name>
-    <object-name>heliceGI</object-name>
-    <object-name>heliceDE</object-name>
-    <object-name>heliceDI</object-name>
     <object-name>baieGA</object-name>
     <object-name>baieGB</object-name>
     <object-name>baieDA</object-name>
@@ -155,22 +157,23 @@
     <object-name>air</object-name>
     <object-name>antennes</object-name>
 
+    <object-name>heliceGE</object-name>
+    <object-name>heliceGI</object-name>
+    <object-name>heliceDE</object-name>
+    <object-name>heliceDI</object-name>
+    <object-name>trainAH</object-name>
+    <object-name>trainAB</object-name>
+    <object-name>roueA</object-name>
+    <object-name>trainGH</object-name>
+    <object-name>trainGB</object-name>
+    <object-name>roueG</object-name>
+    <object-name>trainDH</object-name>
+    <object-name>trainDB</object-name>
+    <object-name>roueD</object-name>
+    
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
@@ -182,11 +185,6 @@
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -237,6 +235,13 @@
   </effect>
 
   <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
     <type>noshadow</type>
     <object-name>vitres</object-name>
     <object-name>cables</object-name>
@@ -252,60 +257,17 @@
 
   <!-- Une ombre pour OSG -->
   <model>
-    <name>shadowOSG</name>
     <path>Aircraft/Br-761/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -4.322 </z-m>
+    </offsets>
   </model>
-
-  <animation>
-    <type>select</type>
-    <object-name>shadowOSG</object-name>
-    <condition>
-      <equals>
-        <property>sim[0]/rendering/shadows-ai</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>
 
   <!-- Intérieur -->
   <model>
     <path>Aircraft/Br-761/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Effets sur le sol -->
-  <!-- Roue avant -->
-  <model>
-    <path>Aircraft/Br-761/Models/Effects/ground/ground0.xml</path>
-    <offsets>
-      <x-m> -13.758 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>  -4.715 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Roue gauche -->
-  <model>
-    <path>Aircraft/Br-761/Models/Effects/ground/ground1.xml</path>
-    <offsets>
-      <x-m> -2.603 </x-m>
-      <y-m> -3.956 </y-m>
-      <z-m> -4.700 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Roue droite -->
-  <model>
-    <path>Aircraft/Br-761/Models/Effects/ground/ground2.xml</path>
-    <offsets>
-      <x-m> -2.603 </x-m>
-      <y-m>  3.956 </y-m>
-      <z-m> -4.700 </z-m>
-    </offsets>
   </model>
 
   <!-- Les moteurs 14R-4 -->
@@ -346,6 +308,78 @@
       <x-m> -7.128 </x-m>
       <y-m>  8.032 </y-m>
       <z-m> -1.023 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Cranking effects -->
+  <!-- Left exterior -->
+  <model>
+    <path>Aircraft/Br-761/Models/Effects/cranking/all-crankingLE.xml</path>
+    <offsets>
+      <x-m> -6.38131 </x-m>
+      <y-m> -8.03174 </y-m>
+      <z-m> -1.02376 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Left interior -->
+  <model>
+    <path>Aircraft/Br-761/Models/Effects/cranking/all-crankingLI.xml</path>
+    <offsets>
+      <x-m> -7.41172 </x-m>
+      <y-m> -3.91064 </y-m>
+      <z-m> -1.14439 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right interior -->
+  <model>
+    <path>Aircraft/Br-761/Models/Effects/cranking/all-crankingRI.xml</path>
+    <offsets>
+      <x-m> -7.41172 </x-m>
+      <y-m>  3.91064 </y-m>
+      <z-m> -1.14439 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Right exterior -->
+  <model>
+    <path>Aircraft/Br-761/Models/Effects/cranking/all-crankingRE.xml</path>
+    <offsets>
+      <x-m> -6.38131 </x-m>
+      <y-m>  8.03174 </y-m>
+      <z-m> -1.02376 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Effets sur le sol -->
+  <!-- Roue avant -->
+  <model>
+    <path>Aircraft/Br-761/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -13.758 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -4.715 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue gauche -->
+  <model>
+    <path>Aircraft/Br-761/Models/Effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m> -2.603 </x-m>
+      <y-m> -3.956 </y-m>
+      <z-m> -4.700 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roue droite -->
+  <model>
+    <path>Aircraft/Br-761/Models/Effects/ground/ground2.xml</path>
+    <offsets>
+      <x-m> -2.603 </x-m>
+      <y-m>  3.956 </y-m>
+      <z-m> -4.700 </z-m>
     </offsets>
   </model>
 
@@ -1417,4 +1451,3 @@
   </animation>
 
 </PropertyList>
-

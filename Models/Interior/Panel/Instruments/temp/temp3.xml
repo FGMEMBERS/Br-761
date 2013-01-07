@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -53,11 +53,6 @@
       <entry><ind> 1652 </ind><dep> 191 </dep></entry> <!--  900 deg C -->
       <entry><ind> 1832 </ind><dep> 215 </dep></entry> <!-- 1000 deg C -->
     </interpolation>
-    <center>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
     <axis>
       <x> -1 </x>
       <y>  0 </y>

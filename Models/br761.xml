@@ -179,7 +179,6 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
@@ -232,6 +231,59 @@
     <object-name>baieDB</object-name>
     <object-name>air</object-name>
     <object-name>antennes</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>   
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>aile</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletGE</object-name>
+    <object-name>voletGI</object-name>
+    <object-name>voletDE</object-name>
+    <object-name>voletDI</object-name>
+    <object-name>aile2</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>derive</object-name>
+    <object-name>directionG</object-name>
+    <object-name>directionD</object-name>
+    <object-name>porteAG1</object-name>
+    <object-name>porteAG2</object-name>
+    <object-name>porteAD1</object-name>
+    <object-name>porteAD2</object-name>
+    <object-name>porteGG1</object-name>
+    <object-name>porteGG2</object-name>
+    <object-name>porteGG3</object-name>
+    <object-name>porteGD1</object-name>
+    <object-name>porteGD2</object-name>
+    <object-name>porteGD3</object-name>
+    <object-name>porteDG1</object-name>
+    <object-name>porteDG2</object-name>
+    <object-name>porteDG3</object-name>
+    <object-name>porteDD1</object-name>
+    <object-name>porteDD2</object-name>
+    <object-name>porteDD3</object-name>
+    <object-name>moteurGE</object-name>
+    <object-name>moteurGI</object-name>
+    <object-name>moteurDE</object-name>
+    <object-name>moteurDI</object-name>
+    <object-name>bolGE</object-name>
+    <object-name>bolGI</object-name>
+    <object-name>bolDE</object-name>
+    <object-name>bolDI</object-name>
+    <object-name>baieGA</object-name>
+    <object-name>baieGB</object-name>
+    <object-name>baieDA</object-name>
+    <object-name>baieDB</object-name>
+    <object-name>air</object-name>
+    <object-name>antennes</object-name>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>   
   </effect>
 
   <animation>
@@ -255,6 +307,24 @@
     <object-name>propblurDI</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitres</object-name>
+    <object-name>cables</object-name>
+    <object-name>propdiscGE</object-name>
+    <object-name>propblurGE</object-name>
+    <object-name>propdiscGI</object-name>
+    <object-name>propblurGI</object-name>
+    <object-name>propdiscDE</object-name>
+    <object-name>propblurDE</object-name>
+    <object-name>propdiscDI</object-name>
+    <object-name>propblurDI</object-name>
+  </effect>
+
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Br-761/Models/shadow.xml</path>
@@ -267,8 +337,15 @@
 
   <!-- Intérieur -->
   <model>
+    <name>Interieur</name>
     <path>Aircraft/Br-761/Models/Interior/interior.xml</path>
   </model>
+
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
 
   <!-- Les moteurs 14R-4 -->
   <!-- Extérieur gauche -->
@@ -431,7 +508,7 @@
     <object-name>propdiscGE</object-name>
     <object-name>propblurGE</object-name>
     <property>engines/engine[0]/rpm</property>
-    <factor> 0.5 </factor>
+    <factor> -0.5 </factor>
     <center>
       <x-m> -7.945 </x-m>
       <y-m> -8.032 </y-m>
@@ -491,7 +568,7 @@
     <object-name>propdiscGI</object-name>
     <object-name>propblurGI</object-name>
     <property>engines/engine[1]/rpm</property>
-    <factor> 0.5 </factor>
+    <factor> -0.5 </factor>
     <center>
       <x-m> -8.979 </x-m>
       <y-m> -3.911 </y-m>
@@ -558,9 +635,9 @@
       <z-m> -1.144 </z-m>
     </center>
     <axis>
-      <x> -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -618,9 +695,9 @@
       <z-m> -1.023 </z-m>
     </center>
     <axis>
-      <x> -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -629,7 +706,7 @@
     <type>rotate</type>
     <object-name>profondeur</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor> 28 </factor>
+    <factor> 15 </factor>
     <center>
       <x-m> 11.637 </x-m>
       <y-m>  0.000 </y-m>
@@ -647,7 +724,7 @@
     <type>rotate</type>
     <object-name>directionG</object-name>
     <property>surface-positions/rudder-pos-norm</property>
-    <factor> -30 </factor>
+    <factor> -15 </factor>
     <center>
       <x-m> 12.013 </x-m>
       <y-m> -6.048 </y-m>
@@ -664,7 +741,7 @@
     <type>rotate</type>
     <object-name>directionD</object-name>
     <property>surface-positions/rudder-pos-norm</property>
-    <factor> -30 </factor>
+    <factor> -15 </factor>
     <center>
       <x-m> 12.013 </x-m>
       <y-m>  6.048 </y-m>

@@ -4,7 +4,8 @@
 
   <sim include="Nasal/views.xml">
  
-    <author>BARANGER Emmanuel (3D)</author>
+    <description>Breguet Br 761 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM/, LesterBoffo (FDM)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
    
@@ -78,6 +79,7 @@
     <br761>
       <file>Aircraft/Br-761/Nasal/liveries.nas</file>
       <file>Aircraft/Br-761/Nasal/light.nas</file>
+      <file>Aircraft/Br-761/Nasal/rpm.nas</file>
     </br761>
   </nasal>
 

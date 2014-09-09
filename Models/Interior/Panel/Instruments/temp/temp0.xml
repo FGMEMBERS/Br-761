@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>temp.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/engines/engine[0]/oil-temperature-degf</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>   0 </dep></entry> <!--    0 deg C -->
+      <entry><ind>  212 </ind><dep>  21 </dep></entry> <!--  100 deg C -->
+      <entry><ind>  392 </ind><dep>  42 </dep></entry> <!--  200 deg C -->
+      <entry><ind>  572 </ind><dep>  63 </dep></entry> <!--  300 deg C-->
+      <entry><ind>  752 </ind><dep>  84 </dep></entry> <!--  400 deg C -->
+      <entry><ind>  932 </ind><dep> 107 </dep></entry> <!--  500 deg C -->
+      <entry><ind> 1112 </ind><dep> 128 </dep></entry> <!--  600 deg C -->
+      <entry><ind> 1292 </ind><dep> 149 </dep></entry> <!--  700 deg C -->
+      <entry><ind> 1472 </ind><dep> 170 </dep></entry> <!--  800 deg C -->
+      <entry><ind> 1652 </ind><dep> 191 </dep></entry> <!--  900 deg C -->
+      <entry><ind> 1832 </ind><dep> 215 </dep></entry> <!-- 1000 deg C -->
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

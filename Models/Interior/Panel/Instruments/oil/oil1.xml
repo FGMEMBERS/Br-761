@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>oil.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needleT</object-name>
+    <object-name>needleP</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needleT</object-name>
+    <object-name>needleP</object-name>
+    <emission>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needleT</object-name>
+    <property>/engines/engine[1]/oil-temperature-degf</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep> -38 </dep></entry> <!-- -10 deg C -->
+      <entry><ind>   0 </ind><dep>   0 </dep></entry> <!--   0 deg C -->
+      <entry><ind>  86 </ind><dep>  35 </dep></entry> <!--  30 deg C -->
+      <entry><ind> 140 </ind><dep>  70 </dep></entry> <!--  60 deg C -->
+      <entry><ind> 194 </ind><dep> 104 </dep></entry> <!--  90 deg C-->
+      <entry><ind> 248 </ind><dep> 142 </dep></entry> <!-- 120 deg C-->
+    </interpolation>
+    <center>
+      <x-m>  0.001 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.017 </z-m>  
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needleP</object-name>
+    <property>/engines/engine[1]/oil-pressure-psi</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  25 </ind><dep>  60 </dep></entry>
+      <entry><ind>  50 </ind><dep> 120 </dep></entry>
+      <entry><ind>  75 </ind><dep> 180 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.001 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.019 </z-m>  
+    </center>
+    <axis> 
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="br761-jsbsim-cnf.xml"> -->
-<PropertyList include="br761-yasim-cnf.xml">
+<PropertyList include="br761-base.xml">
 
   <sim>
     
-    <description>Breguet Br 761 (YASim)</description>
+    <description>Breguet Br 761 "Deux Ponts" (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM/, LesterBoffo (FDM)</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+    <flight-model>yasim</flight-model>
+    <aero>br761-yasim</aero>
     
     <rating>
       <FDM type="int">     3 </FDM>
@@ -18,4 +21,3 @@
   </sim>
 
 </PropertyList>
-

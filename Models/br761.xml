@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -97,10 +97,10 @@
     <object-name>trainDH</object-name>
     <object-name>trainDB</object-name>
     <object-name>roueD</object-name>
+    <object-name>cables</object-name>
     
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
-    <object-name>cables</object-name>
     <object-name>propdiscGE</object-name>
     <object-name>propblurGE</object-name>
     <object-name>propdiscGI</object-name>
@@ -170,15 +170,11 @@
     <object-name>trainDH</object-name>
     <object-name>trainDB</object-name>
     <object-name>roueD</object-name>
+    <object-name>cables</object-name>
     
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-    <specular>
-      <red-prop>specular/red</red-prop>
-      <green-prop>specular/green</green-prop>
-      <blue-prop>specular/blue</blue-prop>
-    </specular>
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
@@ -231,90 +227,18 @@
     <object-name>baieDB</object-name>
     <object-name>air</object-name>
     <object-name>antennes</object-name>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>   
   </effect>
-
-  <effect>
-    <inherits-from>Effects/model-combined-deferred</inherits-from>
-    <object-name>fuselage</object-name>
-    <object-name>aile</object-name>
-    <object-name>aileronG</object-name>
-    <object-name>aileronD</object-name>
-    <object-name>voletGE</object-name>
-    <object-name>voletGI</object-name>
-    <object-name>voletDE</object-name>
-    <object-name>voletDI</object-name>
-    <object-name>aile2</object-name>
-    <object-name>profondeur</object-name>
-    <object-name>derive</object-name>
-    <object-name>directionG</object-name>
-    <object-name>directionD</object-name>
-    <object-name>porteAG1</object-name>
-    <object-name>porteAG2</object-name>
-    <object-name>porteAD1</object-name>
-    <object-name>porteAD2</object-name>
-    <object-name>porteGG1</object-name>
-    <object-name>porteGG2</object-name>
-    <object-name>porteGG3</object-name>
-    <object-name>porteGD1</object-name>
-    <object-name>porteGD2</object-name>
-    <object-name>porteGD3</object-name>
-    <object-name>porteDG1</object-name>
-    <object-name>porteDG2</object-name>
-    <object-name>porteDG3</object-name>
-    <object-name>porteDD1</object-name>
-    <object-name>porteDD2</object-name>
-    <object-name>porteDD3</object-name>
-    <object-name>moteurGE</object-name>
-    <object-name>moteurGI</object-name>
-    <object-name>moteurDE</object-name>
-    <object-name>moteurDI</object-name>
-    <object-name>bolGE</object-name>
-    <object-name>bolGI</object-name>
-    <object-name>bolDE</object-name>
-    <object-name>bolDI</object-name>
-    <object-name>baieGA</object-name>
-    <object-name>baieGB</object-name>
-    <object-name>baieDA</object-name>
-    <object-name>baieDB</object-name>
-    <object-name>air</object-name>
-    <object-name>antennes</object-name>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>   
-  </effect>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>cables</object-name>
-    <object-name>propdiscGE</object-name>
-    <object-name>propblurGE</object-name>
-    <object-name>propdiscGI</object-name>
-    <object-name>propblurGI</object-name>
-    <object-name>propdiscDE</object-name>
-    <object-name>propblurDE</object-name>
-    <object-name>propdiscDI</object-name>
-    <object-name>propblurDI</object-name>
-  </animation>
 
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
+    <inherits-from>Aircraft/Br-761/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
-    <object-name>cables</object-name>
+  </effect>
+  
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitres</object-name>
     <object-name>propdiscGE</object-name>
     <object-name>propblurGE</object-name>
     <object-name>propdiscGI</object-name>
@@ -324,7 +248,7 @@
     <object-name>propdiscDI</object-name>
     <object-name>propblurDI</object-name>
   </effect>
-
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Br-761/Models/shadow.xml</path>
@@ -337,15 +261,9 @@
 
   <!-- Intérieur -->
   <model>
-    <name>Interieur</name>
+    <usage>interieur</usage>
     <path>Aircraft/Br-761/Models/Interior/interior.xml</path>
   </model>
-
-  <!-- For Rembrandt -->
-  <animation>
-    <type>noshadow</type>
-    <object-name>Interieur</object-name>
-  </animation>
 
   <!-- Les moteurs 14R-4 -->
   <!-- Extérieur gauche -->
@@ -496,7 +414,7 @@
     <condition>
       <less-than>
         <property>engines/engine[0]/rpm</property>
-	<value>1500</value>
+        <value>1500</value>
       </less-than>
     </condition>
   </animation>
@@ -556,7 +474,7 @@
     <condition>
       <less-than>
         <property>engines/engine[1]/rpm</property>
-	<value>1500</value>
+        <value>1500</value>
       </less-than>
     </condition>
   </animation>
@@ -616,7 +534,7 @@
     <condition>
       <less-than>
         <property>engines/engine[2]/rpm</property>
-	<value>1500</value>
+        <value>1500</value>
       </less-than>
     </condition>
   </animation>
@@ -676,7 +594,7 @@
     <condition>
       <less-than>
         <property>engines/engine[3]/rpm</property>
-	<value>1500</value>
+        <value>1500</value>
       </less-than>
     </condition>
   </animation>
@@ -1376,9 +1294,26 @@
 
   <!-- Baie -->
   <animation>
+    <type>pick</type>
+    <object-name>baieGA</object-name>
+    <object-name>baieGB</object-name>
+    <object-name>baieDA</object-name>
+    <object-name>baieDB</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>baieGA</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>   0 </dep></entry>
       <entry><ind> 1 </ind><dep> -90 </dep></entry>
@@ -1396,7 +1331,7 @@
   <animation>
     <type>rotate</type>
     <object-name>baieGB</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>   0 </dep></entry>
       <entry><ind> 0.7 </ind><dep> -90 </dep></entry>
@@ -1415,7 +1350,7 @@
   <animation>
     <type>rotate</type>
     <object-name>baieDA</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep>  0 </dep></entry>
       <entry><ind> 1 </ind><dep> 90 </dep></entry>
@@ -1433,7 +1368,7 @@
   <animation>
     <type>rotate</type>
     <object-name>baieDB</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <interpolation>
       <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
       <entry><ind> 0.7 </ind><dep> 90 </dep></entry>
@@ -1478,6 +1413,15 @@
   </model>
 
   <model>
+    <path>Aircraft/Br-761/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m>  -2.432 </x-m>
+      <y-m> -20.741 </y-m>
+      <z-m>   0.454 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
     <path>Aircraft/Br-761/Models/light/GreenLight.xml</path>
     <offsets>
       <x-m> -2.532 </x-m>
@@ -1487,16 +1431,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Br-761/Models/light/StrobeWhite.xml</path>
-    <offsets>
-      <x-m>  -2.432 </x-m>
-      <y-m> -20.741 </y-m>
-      <z-m>   0.454 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Br-761/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Br-761/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -2.432 </x-m>
       <y-m> 20.741 </y-m>
@@ -1506,7 +1441,6 @@
 
   <!-- Wing light cone right -->
   <model>
-    <name>Taxi-Light</name>
     <path>Aircraft/Br-761/Models/light/light-cone.xml</path>
     <offsets>
       <x-m>       -14.247 </x-m>
@@ -1515,16 +1449,5 @@
       <pitch-deg> -10.000 </pitch-deg>
     </offsets>
   </model>
-
-  <animation>
-    <type>select</type>
-    <object-name>Taxi-Light</object-name>
-    <condition>
-      <equals>
-        <property>gear/gear[0]/position-norm</property>
-        <value> 1 </value>
-      </equals>
-    </condition>
-  </animation>
 
 </PropertyList>

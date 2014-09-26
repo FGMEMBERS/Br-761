@@ -2,6 +2,7 @@
 
 <!-- Breguet BR 761 - 2010 Emmanuel BARANGER
             updated - 2013 with LesterBoffo work's
+            updated - 2014 Emmanuel BARANGER
    
      sources          : http://en.wikipedia.org/wiki/Breguet_Deux-Ponts
 
@@ -13,7 +14,7 @@
      Maximum speed    :   390 km/h ( 211 kt )
 -->
 
-<airplane mass="71727">
+<airplane mass="71727" version="YASIM_VERSION_CURRENT">
 
   <approach speed="70" aoa="6">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>

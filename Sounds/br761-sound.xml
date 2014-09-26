@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
- 
-<PropertyList>
 
+<PropertyList>
+  
   <fx>
- 
+    
     <!-- Engine Left exterior -->
     <crank>
       <name>engstart1</name>
@@ -22,7 +22,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-   
+    
     <crank>
       <name>cough1</name>
       <path>Aircraft/Br-761/Sounds/start.wav</path>
@@ -40,7 +40,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <engine>
       <name>engine1_idle</name>
       <mode>looped</mode>
@@ -76,7 +76,7 @@
       <reference-dist>20.0</reference-dist>
       <max-dist>50.0</max-dist>
     </engine>
-
+    
     <engine>
       <name>engineLeft</name>
       <mode>looped</mode>
@@ -110,7 +110,7 @@
         <z>  0.021 </z>
       </position>
     </engine>
-
+    
     <stopext>
       <name>stopextLeft</name>
       <path>Aircraft/Br-761/Sounds/shutdown.wav</path>
@@ -132,7 +132,7 @@
         <z>  0.021 </z>
       </position>
     </stopext>
-
+    
     <stop>
       <name>stopLeft</name>
       <path>Aircraft/Br-761/Sounds/shutdown.wav</path>
@@ -146,15 +146,15 @@
         <factor>1.0</factor>
         <offset>0.0</offset>
       </volume>
-        <reference-dist>100</reference-dist>
-        <max-dist>1000</max-dist>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
       <position>
         <x> -2.627 </x>
         <y>  1.740 </y>
         <z>  0.021 </z>
       </position>
     </stop> 
-
+    
     <!-- Engine Left interior -->
     <crank>
       <name>engstart1</name>
@@ -173,7 +173,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-   
+    
     <crank>
       <name>cough1</name>
       <path>Aircraft/Br-761/Sounds/start.wav</path>
@@ -191,7 +191,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <engine>
       <name>engine1_idle</name>
       <mode>looped</mode>
@@ -227,7 +227,7 @@
       <reference-dist>20.0</reference-dist>
       <max-dist>50.0</max-dist>
     </engine>
-
+    
     <engine>
       <name>engineLeft</name>
       <mode>looped</mode>
@@ -261,7 +261,7 @@
         <z>  0.021 </z>
       </position>
     </engine>
-
+    
     <stopext>
       <name>stopextLeft</name>
       <path>Aircraft/Br-761/Sounds/shutdown.wav</path>
@@ -283,7 +283,7 @@
         <z>  0.021 </z>
       </position>
     </stopext>
-
+    
     <stop>
       <name>stopLeft</name>
       <path>Aircraft/Br-761/Sounds/shutdown.wav</path>
@@ -297,15 +297,15 @@
         <factor>1.0</factor>
         <offset>0.0</offset>
       </volume>
-        <reference-dist>100</reference-dist>
-        <max-dist>1000</max-dist>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
       <position>
         <x> -2.627 </x>
         <y>  1.740 </y>
         <z>  0.021 </z>
       </position>
     </stop> 
-
+    
     <!-- Engine right interior -->
     <crank>
       <name>engstart1</name>
@@ -324,7 +324,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-   
+    
     <crank>
       <name>cough1</name>
       <path>Aircraft/Br-761/Sounds/start.wav</path>
@@ -342,7 +342,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <engine>
       <name>engine1_idle</name>
       <mode>looped</mode>
@@ -378,7 +378,7 @@
       <reference-dist>20.0</reference-dist>
       <max-dist>50.0</max-dist>
     </engine>
-
+    
     <engine>
       <name>engineLeft</name>
       <mode>looped</mode>
@@ -412,7 +412,7 @@
         <z>  0.021 </z>
       </position>
     </engine>
-
+    
     <stopext>
       <name>stopextLeft</name>
       <path>Aircraft/Br-761/Sounds/shutdown.wav</path>
@@ -434,7 +434,7 @@
         <z>  0.021 </z>
       </position>
     </stopext>
-
+    
     <stop>
       <name>stopLeft</name>
       <path>Aircraft/Br-761/Sounds/shutdown.wav</path>
@@ -448,15 +448,15 @@
         <factor>1.0</factor>
         <offset>0.0</offset>
       </volume>
-        <reference-dist>100</reference-dist>
-        <max-dist>1000</max-dist>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
       <position>
         <x> -2.627 </x>
         <y>  1.740 </y>
         <z>  0.021 </z>
       </position>
     </stop> 
-
+    
     <!-- Engine right exterior -->
     <crank>
       <name>engstart1</name>
@@ -475,7 +475,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-   
+    
     <crank>
       <name>cough1</name>
       <path>Aircraft/Br-761/Sounds/start.wav</path>
@@ -493,7 +493,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <engine>
       <name>engine1_idle</name>
       <mode>looped</mode>
@@ -529,7 +529,7 @@
       <reference-dist>20.0</reference-dist>
       <max-dist>50.0</max-dist>
     </engine>
-
+    
     <engine>
       <name>engineLeft</name>
       <mode>looped</mode>
@@ -563,7 +563,7 @@
         <z>  0.021 </z>
       </position>
     </engine>
-
+    
     <stopext>
       <name>stopextLeft</name>
       <path>Aircraft/Br-761/Sounds/shutdown.wav</path>
@@ -585,7 +585,7 @@
         <z>  0.021 </z>
       </position>
     </stopext>
-
+    
     <stop>
       <name>stopLeft</name>
       <path>Aircraft/Br-761/Sounds/shutdown.wav</path>
@@ -599,15 +599,15 @@
         <factor>1.0</factor>
         <offset>0.0</offset>
       </volume>
-        <reference-dist>100</reference-dist>
-        <max-dist>1000</max-dist>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
       <position>
         <x> -2.627 </x>
         <y>  1.740 </y>
         <z>  0.021 </z>
       </position>
     </stop> 
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -616,7 +616,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -629,7 +629,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -664,7 +664,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </squeal>
- 
+    
     <flap>
       <name>flaps</name>
       <mode>in-transit</mode>
@@ -676,7 +676,7 @@
       <reference-dist>10</reference-dist>
       <max-dist>20</max-dist>
     </flap>
-
+    
     <wind>
       <name>wind</name>
       <mode>looped</mode>
@@ -697,7 +697,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </wind>
- 
+    
     <stall>
       <name>stall</name>
       <mode>looped</mode>
@@ -710,7 +710,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </stall>
- 
+    
     <canopy> 
       <name>canopy slide</name>
       <mode>in-transit</mode>
@@ -724,7 +724,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </canopy>
-
+    
   </fx>
- 
+  
 </PropertyList>

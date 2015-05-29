@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -20,12 +20,18 @@
     <object-name>intvitres</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
-  <effect>
-    <inherits-from>Aircraft/Br-761/Models/Effects/Glass/glass</inherits-from>
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>intvitres</object-name>
-  </effect>
-  
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
   <!-- Tableau de bord -->
   <model>
     <path>Aircraft/Br-761/Models/Interior/Panel/panel.xml</path>
@@ -33,6 +39,9 @@
       <x-m> -13.538 </x-m>
       <y-m>   0.000 </y-m>
       <z-m>  -0.699 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -43,31 +52,17 @@
       <x-m> -12.907 </x-m>
       <y-m>  -0.482 </y-m>
       <z-m>  -0.611 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
   <!-- Baie -->
   <animation>
-    <type>pick</type>
-    <object-name>intbaieGA</object-name>
-    <object-name>intbaieGB</object-name>
-    <object-name>intbaieDA</object-name>
-    <object-name>intbaieDB</object-name>
-    <visible>true</visible>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>doors.crew.toggle();</script>
-      </binding>
-    </action>
-  </animation>
-  
-  <animation>
     <type>rotate</type>
     <object-name>intbaieGA</object-name>
-    <property>sim/model/door-positions/crew/position-norm</property>
+    <property>instrumentation/doors/crew/position-norm</property>
     <factor> -90 </factor>
     <axis>
      <x1-m>  3.518 </x1-m>
@@ -82,7 +77,7 @@
   <animation>
     <type>rotate</type>
     <object-name>intbaieGB</object-name>
-    <property>sim/model/door-positions/crew/position-norm</property>
+    <property>instrumentation/doors/crew/position-norm</property>
     <factor> -90 </factor>
     <axis>
      <x1-m>  9.460 </x1-m>
@@ -97,7 +92,7 @@
   <animation>
     <type>rotate</type>
     <object-name>intbaieDA</object-name>
-    <property>sim/model/door-positions/crew/position-norm</property>
+    <property>instrumentation/doors/crew/position-norm</property>
     <factor> 90 </factor>
     <axis>
      <x1-m>  3.518 </x1-m>
@@ -112,7 +107,7 @@
   <animation>
     <type>rotate</type>
     <object-name>intbaieDB</object-name>
-    <property>sim/model/door-positions/crew/position-norm</property>
+    <property>instrumentation/doors/crew/position-norm</property>
     <factor> 90 </factor>
     <axis>
      <x1-m>  9.460 </x1-m>
@@ -125,3 +120,4 @@
   </animation>
 
 </PropertyList>
+

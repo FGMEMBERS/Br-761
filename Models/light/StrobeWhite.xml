@@ -21,6 +21,14 @@
   </animation>
 
   <animation>
+    <type>select</type>
+    <object-name>Light</object-name>
+    <condition>
+      <property>/sim/model/lights/sbc1/state</property>
+    </condition>
+  </animation>
+
+  <animation>
     <type>material</type>
     <object-name>Light</object-name>
     <emission>
